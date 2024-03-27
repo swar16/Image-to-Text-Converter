@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PDF to Text Converter</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+    <h2>Upload a PDF to extract text from images</h2>
+    <div class="div1">
+    <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form">
+        <input type="file" name="file" id="file-input" style="display: none;">
+        <label class="label-input" for="file-input">Choose a File</label>
+        <input type="submit" value="Upload" class="upload-file-button">
+
+        <br><br>
+
+        <div id="pdfDropBox" style="width: 300px; height: 100px; border: 2px dashed #ccc; line-height: 100px; text-align: center; color: #ccc;">
+            <p class="pdfDropBox-Box">Drag and drop PDF files here or click to upload.</p>
+        </div>
+
+        <div id="fileNameDisplay" style="margin-top: 10px;"></div>
+
+
+    </form>
+    </div>
+
+    <br><br><hr><br><br>
+
+    <div class="div2">
+    <form action="/send_email" method="post" enctype="multipart/form-data" class="form-2">
+        <div class="file">
+            <p class="label-input-2">Choose a file:</p>
+            <input type="file" name="file_upload" accept=".pdf, .doc, .docx" class="file-3">
+        </div>
+        <div class="email-0">
+            <p>Enter email:</p>
+            <label>
+                <input type="email" name="recipient_email" class="email-1" required>
+            </label>
+            <input type="submit" value="Send" class="send-message">
+        </div>
+        <div>
+            <p class="spam-info">This mail may go into your spam folder</p>
+        </div>
+    </form>
+    </div>
+
+    <!--FEEDBACK WINDOW-->
+
+    <div class="div3">
+        <form action="/send_feedback" method="post" enctype="multipart/form-data" class="form-3">
+            <p>Send your feedback here: </p>
+            <input type="text" name = "feedback_text" class="text">
+            <input type="submit" value="send" class="send-feedback">
+        </form>
+    </div>
+
+    <div class="div4">
+        <br><br><hr><br><br>
+
+        <a href="https://forms.gle/LwtDi2LCs8uGuP3Z8" target="_blank" class="link">Click here to give your suggestions on a Google Form</a>
+        <br><br><br><hr><br><br>
+    </div>
+
+    <div class="made-by">
+        <p>Abhijeet Rajhans &nbsp;•&nbsp; Ayush Dubey&nbsp; •&nbsp; Yug Sahni&nbsp; •&nbsp; Swar Bhatia</p>
+    </div>
+
+    <script src="../static/js/index.js"></script>
+</body>
+</html>
